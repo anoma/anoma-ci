@@ -25,10 +25,8 @@ jobs:
       fail-fast: false
       matrix:
         command: 
-          - recipe: namada
-            tag_suffix: namada
-          - recipe: wasm
-            tag_suffix: wasm
+          - recipe: anoma
+            tag_suffix: anoma
 
     env:
       FORCE_COLOR: 1

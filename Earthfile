@@ -1,19 +1,15 @@
 VERSION 0.8
 
-wasmd:
-  FROM cosmwasm/wasmd:v0.52.0
-  SAVE ARTIFACT /usr/bin/wasmd AS LOCAL wasmd
-
 anoma:
   FROM ubuntu:24.04
 
   ENV DEBIAN_FRONTEND=noninteractive
 
-  WORKDIR /__w/namada/namada
+  WORKDIR /__w/anoma/anomapay-backend
 
   ARG toolchain=stable
   ARG mold_version=2.40.4
-  ARG tag=namada-main
+  ARG tag=anoma-main
 
   RUN apt-get update -y
   RUN apt-get install -y curl

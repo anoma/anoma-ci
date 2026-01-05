@@ -4,7 +4,7 @@ wasmd:
   FROM cosmwasm/wasmd:v0.52.0
   SAVE ARTIFACT /usr/bin/wasmd AS LOCAL wasmd
 
-namada:
+anoma:
   FROM ubuntu:24.04
 
   ENV DEBIAN_FRONTEND=noninteractive
@@ -67,7 +67,5 @@ namada:
   RUN tar --strip-components 2 -xvzf mold.tar.gz mold-$mold_version-x86_64-linux/bin/mold
   RUN mv mold /usr/local/bin
   RUN chmod +x /usr/local/bin/mold
-
-
 
   SAVE IMAGE --push ghcr.io/heliaxdev/anoma-ci:anoma-latest ghcr.io/heliaxdev/anoma-ci:$tag

@@ -64,4 +64,4 @@ anoma:
   RUN mv mold /usr/local/bin
   RUN chmod +x /usr/local/bin/mold
 
-  SAVE IMAGE --push ghcr.io/heliaxdev/anoma-ci:anoma-latest ghcr.io/heliaxdev/anoma-ci:$tag
+  SAVE IMAGE --push ghcr.io/anoma/anoma-ci:anoma-latest ghcr.io/anoma/anoma-ci:$tag

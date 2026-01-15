@@ -25,6 +25,7 @@ anoma:
   RUN apt-get install -y ca-certificates
   RUN apt-get install -y unzip
   RUN apt-get install -y wget
+  RUN apt-get install -y git
 
   # install rust 
   RUN curl https://sh.rustup.rs -sSf | sh -s -- -y

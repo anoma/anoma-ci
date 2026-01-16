@@ -30,7 +30,7 @@ anoma:
   # install rust 
   RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
 
-  ENV PATH="/root/.cargo/bin:/root/.local/bin:$PATH"
+  ENV PATH="/root/.cargo/bin:/root/.local/bin:/root/.foundry/bin:$PATH"
   ENV RUSTUP_HOME="/root/.rustup"
   ENV CARGO_HOME="/root/.cargo"
     
@@ -58,6 +58,7 @@ anoma:
 
   # install foundry
   RUN curl -L https://foundry.paradigm.xyz | bash
+  RUN foundryup
 
   # download mold
   RUN curl -o mold.tar.gz -LO https://github.com/rui314/mold/releases/download/v$mold_version/mold-$mold_version-x86_64-linux.tar.gz
